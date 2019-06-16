@@ -28,9 +28,7 @@ classification:
 the fix:
 ```js
 let a = 1 ;
-undefined
-typeof a; 
-"number"
+
 ```
 your notes:
 
