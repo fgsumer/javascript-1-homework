@@ -27,6 +27,10 @@ classification:
 
 the fix:
 ```js
+let a = 1 ;
+undefined
+typeof a; 
+"number"
 ```
 your notes:
 need to be detailed, need to be fixed
