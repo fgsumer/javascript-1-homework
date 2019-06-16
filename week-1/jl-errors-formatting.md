@@ -33,7 +33,7 @@ typeof a;
 "number"
 ```
 your notes:
-need to be detailed, need to be fixed
+
 
 [TOP](#formatting-errors)
 
