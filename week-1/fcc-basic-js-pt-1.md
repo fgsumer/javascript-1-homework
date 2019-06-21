@@ -79,7 +79,7 @@ myVar--;
 
 ## 13. Create Decimal Numbers
 ```js
-var myDecimal = 8.8;
+var myDecimal=5.7;
 ```
 
 ## 14. Multiply Two Decimals
@@ -89,25 +89,25 @@ var product = 2.0 * 2.5;
 
 ## 15. Divide One Decimal by Another
 ```js
-var quotient = 4.4 / 2.0;
+var quotient = 4.4 / 2.0;;
 ```
 ## 16. Finding a Remainder
 ```js
-var remainder;
-remainder = 11 % 3;
+var remainder=11%3;
 ```
 ## 17. Compound Assignment With Augmented Addition (+=)
 ```js
+
 a += 12;
 b += 9;
-c += 7;
+c +=7;
 ```
 ## 18. Compound Assignment With Augmented Subtraction (-=)
 
 ```js
 a -= 6;
-b -= 15;
-c -= 1;
+b -=15;
+c -=1;
 ```
 ## 19. Compound Assignment With Augmented Multiplication
 ```js
