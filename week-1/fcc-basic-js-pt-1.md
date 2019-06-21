@@ -111,33 +111,33 @@ c -=1;
 ```
 ## 19. Compound Assignment With Augmented Multiplication
 ```js
-a *= 5;
+a *=5;
 b *= 3;
-c *= 10;
+c *=10;
 ```
 ## 20. Compound Assignment With Augmented Division
 ```js
 a /= 12;
-b /= 4;
-c /= 11;
+b /=4;
+c /=11;
 ```
 
 ## 21. Declare String Variables
 with  ``` " "  ```
 ```js
-var myFirstName = "Alfi";
-var myLastName = "Yusrina";
+var myFirstName ="Fatma";
+var myLastName ="Sumer";
 ```
 
 ## 22. Escaping Literal Quotes in Strings
 Using *backlash* ```\``` in the beginning and in the end of your quotes.
 ```js
-var myStr = "I am a \"double quoted\" string inside \"double quotes\".";
+
 ```
 ## 23. Quoting Strings with Single Quotes
 String values in JS may be written with single or double quotes.
 ```js
-var myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
+
 ```
 
 ## 24. Escape Sequences in Strings
