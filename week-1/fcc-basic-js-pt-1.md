@@ -50,8 +50,7 @@ titleCaseOver = 9000;
 
 ## 7.Add Two Numbers (+)
 ```js
-var sum = 10 + 0;
-sum = 10 + 10;
+var sum = 10 + 10;
 ```
 ## 8. Subtract One Number from Another
 ```js
