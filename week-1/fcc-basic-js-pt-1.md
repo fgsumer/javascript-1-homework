@@ -20,9 +20,8 @@ var myName;
 
 ## 3.Storing Values with the Assignment Operator
 ```js
-a = 7;
-b = a;
-a = b;
+var a=7;
+var b=a;
 ```
 
 ## 4. Initializing Variables with the Assignment Operator
