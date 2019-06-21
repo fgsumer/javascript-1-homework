@@ -26,14 +26,14 @@ var b=a;
 
 ## 4. Initializing Variables with the Assignment Operator
 ```js
-var a = 9;
+var a=9;
 ```
 
 ## 5. Understanding Uninitialized Variables
 ```js
-var a = 5;
-var b = 10;
-var c = "I am a";
+var a=5;
+var b=10;
+var c="I am a";
 ```
 ## 6. Understanding Case Sensitivity in Variables
 ```js
