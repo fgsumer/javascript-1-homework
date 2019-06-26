@@ -14,8 +14,13 @@ You'll be given a bunch of variables with the wrong value assigned and a tempora
 
 ### challenges
 1. [the first](https://goo.gl/k9jdZy)
-```js
-// your solution here
+```
+let a = "b", b = "a";
+let _ = ' ';
+
+_ = b;
+b = a;
+a = _;
 ```
 1. [the second](https://goo.gl/KvayUU)
 ```js
