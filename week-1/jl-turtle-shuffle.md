@@ -148,7 +148,7 @@ some trickier function exercises before moving on.
     var result = _4 + _2 + _5 + _4 + _1 + _3;
     return result;
   }
-  const return_val = turtle(/* write some arguments */);
+  const return_val = turtle("l", "u", "e", "t", "r");
   console.assert(return_val === 'turtle', "6: return_val === " + return_val);
 };
 ```
@@ -162,7 +162,7 @@ some trickier function exercises before moving on.
     var result = _2 + _1 + _4 + _2 + "l" + _3;
     return result;
   }
-  const return_val = turtle(/* write some arguments */);
+  const return_val = turtle("u", "t", "e", "r", "l");
   console.assert(return_val === 'turtle', "7: return_val === " + return_val);
 };
 ```
@@ -178,7 +178,7 @@ some trickier function exercises before moving on.
     var result = _4 + "u" + _1 + _4 + _5 + "e";
     return result;
   }
-  const return_val = turtle(/* write some arguments */);
+  const return_val = turtle("u", "t", "r", "e", "l");
   console.assert(return_val === 'turtle', "8: return_val === " + return_val);
 };
 ```
@@ -196,7 +196,7 @@ some trickier function exercises before moving on.
     var result = _4 + "u" + _1 + _4 + _3 + "e";
     return result;
   }
-  const return_val = turtle(/* write some arguments */);
+  const return_val = turtle("u", "t", "r", "l", "e");
   console.assert(return_val === 'turtle', "9: return_val === " + return_val);
 };
 ```
