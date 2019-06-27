@@ -5,11 +5,17 @@
 
 ### note for me: this framework is not correct. make yours.
 
-## 1. Comment Your Code
+## 1. Use the JavaScript Console to Check the Value of a Variable
 
 ```js
-// this is my first comment
-/* this is a multi line comment */
+let a = 5;
+let b = 1;
+a++;
+// Add your code below this line
+
+console.log(a);
+let sumAB = a + b;
+console.log(sumAB);
 ```
 
 ## 2. Declare Variables
