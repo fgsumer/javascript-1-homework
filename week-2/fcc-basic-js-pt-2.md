@@ -33,6 +33,7 @@ var b = 10;
 var c = "I am a";
 ```
 ## 6. Understanding Case Sensitivity in Variables
+## BURADA KALDIM
 ```js
 // Declarations
 var studlyCapVar;
