@@ -214,11 +214,15 @@ wordBlanks("cat", "little", "hit", "slowly");
 ## 36. Store Multiple Values in one Variable using JavaScript Arrays
 Array variables for storing several pieces of data in one place.
 ```js
-var myArray = ["Alfi", 28];
+var myArray = ["Kevin", 35];
 ```
 ## 37. Nest one Array within Another Array
 ```js
-var myArray = [["Bulls", 23], ["White Sox", 45]];
+var myArray = [["Kevin", 35],["Albert", 27]];
+```
+## 38. Access Array Data with Indexes
+```js
+var myData = myArray[0];
 ```
 ## 39. Modify Array Data With Indexes
 ```js
@@ -236,7 +240,8 @@ myArray.push(["dog", 3]);
 ## 42. Manipulate Arrays With pop()
 You can pop off the last array, and store it in a variable.
 ```js
-var removedFromMyArray = myArray.pop();
+var removedFromMyArray;
+removedFromMyArray = myArray.pop()
 ```
 ## 43. Manipulate Arrays With shift()
 removing the first in the array
@@ -246,30 +251,27 @@ var removedFromMyArray = myArray.shift();
 ## 44. Manipulate Arrays With unshift()
 Adding an extra to the first in the array.
 ```js
-var myArray = [["John", 23], ["dog", 3]];
-myArray.shift();
-
-myArray.unshift(["Paul",35]);
+myArray.unshift(["Paul", 35]);
 ```
 ## 45. Shopping List
 ```js
-var myList = [["rice", 5] , ["bread", 6] , ["cake", 7], [ "quinoa", 9], ["potato", 20]];
+var myList = [["banana", 3], ["watermelon", 1], ["cherry", 0.5], ["grapes", 1], ["lime", 3]];
 ```
 ## 46. Write Reusable JavaScript with Functions
 ```js
-function reusableFunction() {
-  console.log("Hi World");
+function reusableFunction(){
+    console.log("Hi World");
 }
-
 reusableFunction();
 ```
 ## 47. Passing Values to Functions with Arguments
 ```js
-function functionWithArgs (a , b) {
-console.log(a + b);
+function functionWithArgs(x, y) {
+  console.log(x + y);
 }
-functionWithArgs (1 , 2);
-functionWithArgs (7 , 9);
+
+functionWithArgs(21,3);
+
 ```
 ## 48. Global Scope and Functions
 Scope refers to the visibility of variables.
@@ -277,35 +279,39 @@ Variables which are defined **outside of a function block** have **Global scope*
 Variables which are used **without the ```var```** keyword are automatically created in the ```global``` scope. This can create unintended consequences elsewhere in your code or when running a function again. You should always declare your variables with ```var```.
 ```js
 var myGlobal = 10;
+
 function fun1() {
-  oopsGlobal = 5;
+  oopsGlobal = 5; 
 }
 ```
 ## 49. Local Scope and Functions
 ```js
 function myLocalScope() {
-var myVar = 'use strict';
+  'use strict'; // you shouldn't need to edit this line
+  var myVar = 47;
+  console.log(myVar);
 }
 myLocalScope();
+
 ```
 ## 50. Global vs. Local Scope in Functions
 ```js
 var outerWear = "T-Shirt";
+
 function myOutfit() {
   var outerWear = "sweater";
   return outerWear;
 }
+
 myOutfit();
 ```
 ## 51. Return a Value from a Function with Return
-Use a ```return``` statement to send a value back out of a function.
 ```js
-function timesFive (num) {
-  return num * 5;
+function timesFive(x) {
+  return x * 5; 
 }
-timesFive(5);
-timesFive(2);
-timesFive(0);
+
+console.log(timesFive (10));
 ```
 ## 52. Understanding Undefined Value returned from a Function
 ```js
