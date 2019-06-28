@@ -203,13 +203,17 @@ var lastLetterOfLastName = lastName[lastName.length-1];
 var secondToLastLetterOfLastName = lastName[lastName.length-2];
 ```
 ## 35. Word Blanks 
-#go on from here!!
+I couldn't manage the sample, but worked on this one on crome console.
 ```js
+
 function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
-  var result = "The " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb + ".";
+    var result = myAdjective+" "+myNoun+"s are "+myVerb+"ing "+myAdverb+".";
+
   return result;
 }
-wordBlanks("cat", "little", "hit", "slowly");
+
+// Change the words here to test your function
+wordBlanks("kitten", "Two", "play", "wildly");
 ```
 ## 36. Store Multiple Values in one Variable using JavaScript Arrays
 Array variables for storing several pieces of data in one place.
@@ -314,18 +318,20 @@ function timesFive(x) {
 console.log(timesFive (10));
 ```
 ## 52. Understanding Undefined Value returned from a Function
+note: In the case that the function doesn't have a return statement, when you call it, the function processes the inner code but the returned value is "undefined".
 ```js
-function addFive() {
-  sum = sum + 5;
+function addFive(){
+  sum += 5;
 }
 ```
 ## 53. Assignment with a Returned Value
 ```js
-var processed = 0;
+
 function processArg(num) {
   return (num + 3) / 5;
 }
-processed = processArg(7);
+var processed = processArg(7);
+
 ```
 ## 54. Stand in Line
  A **queue** is an abstract Data Structure where items are kept in order.
@@ -335,26 +341,27 @@ Add the number to the end of the array = ```push```
 Remove the first element of the array = ```shift```
 Then return the element that was removed = using ```return```.
 ```js
-function nextInLine(arr, item) {
+
+  function nextInLine(arr, item) {
   arr.push(item);
-  return  arr.shift();
+  var x = arr.shift()
+  return x;
 }
 ```
 ## 55. Understanding Boolean Values
 ```js
 function welcomeToBooleans() {
-return true;
+return true; // Change this line
 }
 ```
 ## 56. Use Conditional Logic with If Statements
 ```js
 function trueOrFalse(wasThatTrue) {
     if (wasThatTrue) {
-    return "Yes, that was true";
-  }
-  return "No, that was false";
+        return "Yes, that was true";
+    }
+return "No, that was false";
 }
-trueOrFalse(true);
 ```
 ## 57. Comparison with the Equality Operator
 ```js
@@ -364,20 +371,19 @@ function testEqual(val) {
   }
   return "Not Equal";
 }
-testEqual(12);
+
+testEqual(10);
 ```
 ## 58. Comparison with the Strict Equality Operator
-However, unlike the equality operator, which attempts to convert both values being compared to a common type, the strict equality operator does not perform a type conversion.
 
-If the values being compared have different types, they are considered unequal, and the strict equality operator will return false.
 ```js
 function testStrict(val) {
-  if (val === 7) {
+  if (val === 7) { 
     return "Equal";
   }
   return "Not Equal";
 }
-testStrict(10);
+testStrict(7);
 ```
 ## 59. Practice comparing different values
 ```js
@@ -387,7 +393,6 @@ function compareEquality(a, b) {
   }
   return "Not Equal";
 }
-compareEquality(10, "10");
 ```
 ## 60. Comparison with the Inequality Operator
 ```js
@@ -402,6 +407,7 @@ testNotEqual(10);
 ## 61. Comparison with the Strict Inequality Operator
 ```js
 function testStrictNotEqual(val) {
+  
   if (val !== 17) {
     return "Not Equal";
   }
@@ -411,62 +417,59 @@ function testStrictNotEqual(val) {
 testStrictNotEqual(10);
 ```
 ## 62. Comparison with the Greater Than Operator
-```js
+```
 function testGreaterThan(val) {
-  if (val > 100) {
+  if (val > 100) { 
     return "Over 100";
   }
-
-  if (val > 10) {
+  
+  if (val > 10) { 
     return "Over 10";
   }
-
   return "10 or Under";
 }
 
 testGreaterThan(10);
 ```
+
 ## 63. Comparison with the Greater Than Or Equal To Operator
+
 ```js
 function testGreaterOrEqual(val) {
-  if (val >= 20) {
+  if (val >= 20) { 
     return "20 or Over";
   }
-
-  if (val >= 10) {
+  
+  if (val >= 10) { 
     return "10 or Over";
   }
-
   return "Less than 10";
 }
 
-
 testGreaterOrEqual(10);
 ```
+
 ## 64. Comparison with the Less Than Operator
 ```js
 function testLessThan(val) {
-  if (val < 25) {
+  if (val < 25) {  
     return "Under 25";
   }
-
-  if (val < 55) {
+  if (val < 55) { 
     return "Under 55";
   }
-
   return "55 or Over";
 }
-
 testLessThan(10);
 ```
 ## 65. Comparison with the Less Than Or Equal To Operator
 ```js
 function testLessOrEqual(val) {
-  if (val <= 12) {
+  if (val <= 12) {  
     return "Smaller Than or Equal to 12";
   }
-
-  if (val <=24) {
+  
+  if (val <= 24) { 
     return "Smaller Than or Equal to 24";
   }
 
@@ -479,31 +482,23 @@ testLessOrEqual(10);
 ## 66. Comparison with the Logical And Operator
 ```js
 function testLogicalAnd(val) {
-
-  if (val >= 25 && val <= 50) {
+  if (val <= 50 && val >= 25) {
       return "Yes";
-  }
-
+    }
   return "No";
 }
-
-
 testLogicalAnd(10);
 ```
 ## 67. Comparison with the Logical Or Operator
 ```js
 function testLogicalOr(val) {
 
-
-  if (val < 10 || val > 20 ) {
-
+  if (val > 20 || val < 10) {
     return "Outside";
   }
 
   return "Inside";
 }
-
-
 testLogicalOr(15);
 ```
 ## 68. Introducing Else Statements
@@ -511,19 +506,14 @@ testLogicalOr(15);
 ```js
 function testElse(val) {
   var result = "";
-
+  
   if (val > 5) {
     result = "Bigger than 5";
-  }
-
-  else {
+  } else {
     result = "5 or Smaller";
   }
-
-
   return result;
 }
-
 
 testElse(4);
 
@@ -533,18 +523,14 @@ testElse(4);
 function testElseIf(val) {
   if (val > 10) {
     return "Greater than 10";
-  }
-
-  else if (val < 5) {
+  } else if (val < 5) {
     return "Smaller than 5";
-  }
-  else {
-      return "Between 5 and 10";
-  }
-
+  } else {
+  return "Between 5 and 10";
 }
-
+}
 testElseIf(7);
+
 
 ```
 ## 70. Logical Order in If Else Statements
@@ -558,52 +544,65 @@ function orderMyLogic(val) {
     return "Greater than or equal to 10";
   }
 }
-
 orderMyLogic(7);
 ```
 ## 71. Chaining If Else Statements
 ```js
 function testSize(num) {
-  if(num < 5) {
+  if (num < 5) {
     return "Tiny";
-  } else if (num < 10) {
- return "Small";
-  } else if (num < 15) {
-return "Medium";
-  } else if (num < 20) {
-return "Large";
-  } else if ( num >= 20 ) {
+  } 
+  else if (num < 10) {
+    return "Small";
+  } 
+  else if (num < 15) {
+    return "Medium";
+  } 
+  else if (num < 20) {
+    return "Large";
+  } 
+  else if (num >= 20) {
     return "Huge";
-    } else {
-    return "Change Me"; }
-
+  } 
+  else {
+    return "Change Me";
+  }
 }
-
 testSize(7);
 ```
 ## 72. Golf Code
 ```js
 var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
 function golfScore(par, strokes) {
+  // Only change code below this line
   if (strokes == 1) {
-return "Hole-in-one!";
-  } else if (strokes <= par - 2) {
-     return "Eagle" ;
-  } else if (strokes == par - 1) {
-     return "Birdie" ;
-  } else if (strokes == par) {
-     return "Par" ;
-  } else if (strokes == par + 1) {
-     return "Bogey" ;
-  } else if (strokes == par + 2) {
-     return "Double Bogey" ;
-  } else if (strokes >= par + 3) {
-     return "Go Home!" ;
-  } else {
-     return "Change Me";
+    return "Hole-in-one!"
   }
+  else if (storkes <= par-2) {
+    return "Eagle"
+  }
+  else if (strokes == par-1){
+    return "Birdie"
+  }
+  else if (strokes == par){
+    return "Par"
+  }
+  else if (strokes == par + 1) {
+    return 	"Bogey"
+  }
+  else if (stokes == par + 2) {
+    return "Double Bogey"
+  }
+  else if (strokes >= par + 3 ){
+    return 	"Go Home!"
+  }
+  else 
+  return "Change Me";
+  // Only change code above this line
 }
 
+// Change these values to test
 golfScore(5, 4);
 ```
 
