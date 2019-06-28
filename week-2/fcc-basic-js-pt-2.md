@@ -4,8 +4,9 @@
 ## 1. Comment Your Code
 
 ```js
-// this is my first comment
-/* this is a multi line comment */
+// in-line comment.
+/* multi-line 
+comment */
 ```
 
 ## 2. Declare Variables
@@ -15,9 +16,8 @@ var myName;
 
 ## 3.Storing Values with the Assignment Operator
 ```js
-a = 7;
-b = a;
-a = b;
+var a = 7;
+b = a; 
 ```
 
 ## 4. Initializing Variables with the Assignment Operator
@@ -26,6 +26,7 @@ var a = 9;
 ```
 
 ## 5. Understanding Uninitialized Variables
+When JavaScript variables are declared, they have an initial value of **undefined**. If you do a mathematical operation on an undefined variable your result will be **NaN** which means "Not a Number". * If you concatenate a string with an undefined variable, you will get a literal string of "undefined".* 
 ```js
 var a = 5;
 var b = 10;
