@@ -1,28 +1,150 @@
 > complete the rest of [basic JS exercises](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript) on FCC and paste each of your solutions into this file.  This will allow you to use your FCC exercises as a study reference later on  
 > [completed example](https://github.com/AlfiYusrina/hyf-javascript1/blob/master/week1/freecode_camp_solutions.MD) 
 
-## 1. Comment Your Code
+## 1. Selecting from Many Options with Switch Statements
 
+f you have many options to choose from, use a **switch** statement. A switch statement tests a value and can have many case statements which define various possible values. Statements are executed from the first matched case value until a **break** is encountered.
 ```js
-// in-line comment.
-/* multi-line 
-comment */
+function caseInSwitch(val) {
+  var answer = "";
+  
+  switch (val) {
+    case 1:
+    return "alpha";
+    break;
+
+    case 2:
+    return "beta"; 
+    break;
+    
+    case 3:
+    return "gamma";
+    break;
+    case 4: 
+    return "delta";
+    break;
+  }
+  
+  return answer;  
+}
+
+caseInSwitch(1);
 ```
 
-## 2. Declare Variables
+## 2. Adding a Default Option in Switch Statements
 ```js
-var myName;
+function switchOfStuff(val) {
+  var answer = "";
+
+ switch (val) {
+   case "a":
+   return "apple";
+   break;
+
+   case "b":
+   return "bird";
+   break;
+
+   case "c":
+   return "cat";
+   break;
+
+  default:
+  return "stuff"
+ }
+  
+  return answer;  
+}
+switchOfStuff(1);
 ```
 
-## 3.Storing Values with the Assignment Operator
-```js
-var a = 7;
-b = a; 
+## 3.Multiple Identical Options in Switch Statements
+If the **break** statement is omitted from a switch statement's case, the following case statement(s) are executed until a break is encountered. If you have multiple inputs with the same output, you can use break after these many statements.
+
+```
+function sequentialSizes(val) {
+  var answer = "";
+ 
+  switch (val) {
+    case 1:
+    case 2:
+    case 3:
+    return "Low";
+    break;
+
+    case 4:
+    case 5:
+    case 6:
+    return "Mid";
+    break;
+
+    case 7:
+    case 8:
+    case 9:
+    return "High";
+    break;
+  }
+  
+  return answer;  
+}
+sequentialSizes(1);
+
 ```
 
-## 4. Initializing Variables with the Assignment Operator
+## 4. Replacing If Else Chains with Switch
+
+#### From if statement 
 ```js
-var a = 9;
+
+function chainToSwitch(val) {
+  var answer = "";
+  // Only change code below this line
+  
+  if (val === "bob") {
+    answer = "Marley";
+  } else if (val === 42) {
+    answer = "The Answer";
+  } else if (val === 1) {
+    answer = "There is no #1";
+  } else if (val === 99) {
+    answer = "Missed me by this much!";
+  } else if (val === 7) {
+    answer = "Ate Nine";
+  }
+  return answer;  
+}
+
+chainToSwitch(7);
+```
+#### to switch statement
+```js
+function chainToSwitch(val) {
+  var answer = "";
+  
+  switch (val) {
+    case "bob": 
+    return "Marley";
+    break;
+
+    case 42:
+    return "The Answer";
+    break;
+
+    case 1:
+    return "There is no #1";
+    break;
+
+    case 99:
+    return "Missed me by this much!"
+    break; 
+
+    case 7:
+    return "Ate Nine";
+  }
+ 
+  return answer;  
+}
+chainToSwitch(7);
 ```
 
 ## 5. Understanding Uninitialized Variables
@@ -48,8 +170,7 @@ titleCaseOver = 9000;
 
 ## 7.Add Two Numbers (+)
 ```js
-var sum = 10 + 0;
-sum = 10 + 10;
+var sum = 10 + 10;
 ```
 ## 8. Subtract One Number from Another
 ```js
@@ -72,13 +193,15 @@ myVar++;
 
 ## 12. Decrement a Number (i--)
 ```js
+var myVar = 11;
 myVar--;
+
 ```
 
 
 ## 13. Create Decimal Numbers
 ```js
-var myDecimal = 8.8;
+var myDecimal = 5.7; 
 ```
 
 ## 14. Multiply Two Decimals
@@ -92,60 +215,73 @@ var quotient = 4.4 / 2.0;
 ```
 ## 16. Finding a Remainder
 ```js
-var remainder;
-remainder = 11 % 3;
+var remainder = 11 % 3;
 ```
 ## 17. Compound Assignment With Augmented Addition (+=)
 ```js
-a += 12;
+var a = 3;
+var b = 17;
+var c = 12;
+
+a += 12; (a = a + 12;)
 b += 9;
 c += 7;
 ```
 ## 18. Compound Assignment With Augmented Subtraction (-=)
 
 ```js
-a -= 6;
+var a = 11;
+var b = 9;
+var c = 3;
+
+a -= 6; (a = a - 6;)
 b -= 15;
 c -= 1;
 ```
 ## 19. Compound Assignment With Augmented Multiplication
 ```js
-a *= 5;
+var a = 5;
+var b = 12;
+var c = 4.6;
+
+a *= 5; (a = a * 5;)
 b *= 3;
 c *= 10;
 ```
 ## 20. Compound Assignment With Augmented Division
 ```js
-a /= 12;
+var a = 48;
+var b = 108;
+var c = 33;
+
+a /= 12; (a = a /12;)
 b /= 4;
-c /= 11;
+c /=11;
 ```
 
 ## 21. Declare String Variables
 with  ``` " "  ```
 ```js
-var myFirstName = "Alfi";
-var myLastName = "Yusrina";
+var myFirstName = "Fatma";
+var myLastName = "Sumer"
 ```
 
 ## 22. Escaping Literal Quotes in Strings
-Using *backlash* ```\``` in the beginning and in the end of your quotes.
+
 ```js
-var myStr = "I am a \"double quoted\" string inside \"double quotes\".";
+var myStr = "I am a \"double quoted\" string inside \"double quotes\"."; // Change this line
 ```
 ## 23. Quoting Strings with Single Quotes
-String values in JS may be written with single or double quotes.
 ```js
 var myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
 ```
 
 ## 24. Escape Sequences in Strings
-Reasons to use escaping characters:
-- is to allow you to use characters you might not otherwise be able to type out, such as a backspace.
-- is to allow you to represent multiple quotes in a string without JS misinterpreting what you mean.
 
+There are a few more escaping characters!
 ```js
-var myStr = 'FirstLine\n\t\\SecondLine\nThirdLine';
+var myStr ="FirstLine\n\t\\SecondLine\nThirdLine";
+
 ```
 
 ## 25. Concatenating Strings with Plus Operator
