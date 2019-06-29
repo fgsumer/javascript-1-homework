@@ -147,96 +147,237 @@ function chainToSwitch(val) {
 chainToSwitch(7);
 ```
 
-## 5. Understanding Uninitialized Variables
-When JavaScript variables are declared, they have an initial value of **undefined**. If you do a mathematical operation on an undefined variable your result will be **NaN** which means "Not a Number". * If you concatenate a string with an undefined variable, you will get a literal string of "undefined".* 
+## 5. Returning Boolean Values from Functions
+Instead of if statement for comparision, you can use another way below.
 ```js
-var a = 5;
-var b = 10;
-var c = "I am a";
-```
-## 6. Understanding Case Sensitivity in Variables
-## BURADA KALDIM
-```js
-// Declarations
-var studlyCapVar;
-var properCamelCase;
-var titleCaseOver;
-
-// Assignments
-studlyCapVar = 10;
-properCamelCase = "A String";
-titleCaseOver = 9000;
-```
-
-## 7.Add Two Numbers (+)
-```js
-var sum = 10 + 10;
-```
-## 8. Subtract One Number from Another
-```js
-var difference = 45 - 33;
-```
-## 9. Multiply Two Numbers
-```js
-var product = 8 * 10;
-```
-## 10. Divide One Number by Another (/)
-```js
-var quotient = 66 / 33;
-```
-## 11 .Increment a Number (i++)
-
-```js
-var myVar = 87;
-myVar++;
-```
-
-## 12. Decrement a Number (i--)
-```js
-var myVar = 11;
-myVar--;
-
-```
+function isLess(a, b) {
+  if (a < b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+isLess(10, 15);
 
 
-## 13. Create Decimal Numbers
-```js
-var myDecimal = 5.7; 
-```
+function isLess(a, b) {
+  return a <= b;
+}
+isLess(15, 10);
 
-## 14. Multiply Two Decimals
-```js
-var product = 2.0 * 2.5;
 ```
-
-## 15. Divide One Decimal by Another
-```js
-var quotient = 4.4 / 2.0;
-```
-## 16. Finding a Remainder
-```js
-var remainder = 11 % 3;
-```
-## 17. Compound Assignment With Augmented Addition (+=)
-```js
-var a = 3;
-var b = 17;
-var c = 12;
-
-a += 12; (a = a + 12;)
-b += 9;
-c += 7;
-```
-## 18. Compound Assignment With Augmented Subtraction (-=)
+## 6. Return Early Pattern for Functions
 
 ```js
-var a = 11;
-var b = 9;
-var c = 3;
+ 
+function abTest(a, b) {
+ 
+  if (a < 0 || b < 0) {
+      return undefined;
+      } else {
+      
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+}
+// Change values below to test your code
 
-a -= 6; (a = a - 6;)
-b -= 15;
-c -= 1;
+abTest(2,2);
+  
+```
+
+## 7.Counting Cards
+```js
+var count = 0;
+
+function cc(card) {
+  // Only change code below this line
+  switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+    break; 
+    case 7:
+    case 8:
+    case 9:
+      count;
+      break;
+  case 10:
+  case 'J':
+  case 'Q':
+  case 'K':
+  case 'A':
+    count--;
+    break;
+
+  }
+  if (count > 0) {
+    return count + " Bet"
+  } else {
+    return count + " Hold"
+  }
+  // Only change code above this line
+}
+
+```
+## 8. Build JavaScript Objects
+objects and their properties 
+```js
+var myDog = {
+  "name" : "Zoe",
+  "legs" : 4,
+  "tails" : 1,
+  "friends" : ["balls", "bones"]
+};
+```
+## 9. Accessing Object Properties with Dot Notation
+There are two ways to access the properties of an object: **dot notation (.)** and **bracket notation ([]),** similar to an array. Dot notation is what you use when you know the name of the property you're trying to access ahead of time.
+```js
+
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+var hatValue = testObj.hat;      
+var shirtValue = testObj.shirt;   
+```
+## 10. Accessing Object Properties with Bracket Notation
+```js
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+
+var entreeValue = testObj["an entree"]; 
+var drinkValue = testObj["the drink"]; 
+```
+## 11. Accessing Object Properties with Variables
+
+```js
+// Setup
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+var playerNumber = 16;      
+var player = testObj[playerNumber];
+
+```
+
+## 12. Updating Object Properties
+
+```js
+var myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+myDog.name = "Happy Coder";
+
+```
+
+## 13. Add New Properties to a JavaScript Object
+
+You can add new properties to existing JavaScript objects the same way you would modify them.
+```js
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+myDog.bark = "Wouf-Wouf";
+```
+
+## 14. Delete Properties from a JavaScript Object
+```js
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+delete myDog.tails; 
+
+```
+
+## 15. Using Objects for Lookups
+If you have tabular data, you can use an object to "lookup" values rather than a switch statement or an if/else chain. This is most useful when you know that your input data is limited to a certain range.
+
+#### from  swıtch
+```js
+switch(val) {
+    case "alpha": 
+      result = "Adams";
+      break;
+    case "bravo": 
+      result = "Boston";
+      break;
+    case "charlie": 
+      result = "Chicago";
+      break;
+    case "delta": 
+      result = "Denver";
+      break;
+    case "echo": 
+      result = "Easy";
+      break;
+    case "foxtrot": 
+      result = "Frank";
+  }
+  ```
+  
+  #### to objects
+  
+  ```js
+  var lookup = {
+  "alpha" : "Adams",
+  "bravo" : "Boston",
+  "charlie" : "Chicago",
+  "delta" : "Denver",
+  "echo" : "Easy", 
+  "foxtrot" : "Frank"
+  } ;
+  
+result = lookup[val];
+
+```
+## 16. Testing Objects for Properties
+```js
+
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh"
+};
+
+function checkObj(checkProp) {
+  if (myObj.hasOwnProperty(checkProp) == true) {
+    return myObj[checkProp];
+  } else {
+    return "Not Found"
+  }
+}
+```
+## 17. Manipulating Complex Objects
+```js
+
+```
+## 18. 
+
+```js
+
 ```
 ## 19. Compound Assignment With Augmented Multiplication
 ```js
