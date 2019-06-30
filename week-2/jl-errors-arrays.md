@@ -80,11 +80,12 @@ classification:
 
 the fix:
 ```js
-let myArray = new Array ( );
-    myArray[0] = new Array ( 1, 2, 3 );
-   	myArray[1] = new Array ( 4, 5, 6 );
-    myArray[2] = new Array ( 7, 8, 9 );
- 
+let myArray = [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]
+              ];
+ console.log(myArray);
 ```
 your notes:
 
