@@ -516,26 +516,48 @@ for (var i = 9; i > 0; i -= 2) {
 ```
 
 ## 25. Iterate Through an Array with a For Loop
+
+A common task in JavaScript is to iterate through the contents of an array. One way to do that is with a for loop. 
+First myArr and total are declared. Then the for loop starts. First i = 0, this is smaller than myArr.length (which is 5) so it will run the code inside the brackets: total += myArr[i] with i = 0, so: total += myArr[0] and myArr[0] = 2: total += 2. So now 2 is added to the total variable which is now 2 (0+2). Now i is incremented by 1 and becomes 1. Since this is smaller than myArr.length it will run the code between the brackets. Again it will add myArr[i], which is: myArr[1] which is: 3 to total variable. total is now 5 (2+3). These steps continue till myArr[4] has been added. Then i will become 5 and will no longer satisfy the condition (i < myArr.length).
+```js
+var myArr = [ 2, 3, 4, 5, 6];
+var total = 0; 
+
+for (var i = 0; i < myArr.length; i++) {
+  total += myArr[i];
+}
+// Only change code below this line
+
+
+```
+## 26. Nesting For Loops
+```js
+function multiplyAll(arr) {
+  var product = 1;
+ 
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 0; j < arr[i].length; j++ ){
+      product *= arr[i][j];
+    }
+  }
+  // Only change code above this line
+  return product;
+}
+
+multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+```
+## 27. Iterate with JavaScript Do...While Loops
 ```js
 
 ```
-## 26. 
+## 28. 
 ```js
 
 ```
-## 27. Constructing Strings with Variables
+## 29.
 ```js
-var myStr = "My name is " + myName + " and I am well!";
-```
-## 28. Appending Variables to Strings
-```js
-var someAdjective = "boring";
-var myStr = "Learning to code is ";
-myStr += someAdjective;
-```
-## 29. Find the Length of a String
-```js
-lastNameLength = lastName.length;
+
 ```
 ## 30. Use Bracket Notation to Find the First Character in a String
 ```js
