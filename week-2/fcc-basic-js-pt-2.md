@@ -374,65 +374,154 @@ function checkObj(checkProp) {
 ```js
 
 ```
-## 18. 
+## 18. Accessing Nested Objects
 
+```js
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+var gloveBoxContents = myStorage.car.inside[ "glove box" ];
+
+```
+## 19. Accessing Nested Arrays
+```js
+
+var myPlants = [
+  { 
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }  
+];
+
+
+var secondTree = myPlants[1].list[1]; // pine 
+```
+## 20. Record Collection (full sample)
+```js
+// Setup
+var collection = {
+    "2548": {
+      "album": "Slippery When Wet",
+      "artist": "Bon Jovi",
+      "tracks": [ 
+        "Let It Rock", 
+        "You Give Love a Bad Name" 
+      ]
+    },
+    "2468": {
+      "album": "1999",
+      "artist": "Prince",
+      "tracks": [ 
+        "1999", 
+        "Little Red Corvette" 
+      ]
+    },
+    "1245": {
+      "artist": "Robert Palmer",
+      "tracks": [ ]
+    },
+    "5439": {
+      "album": "ABBA Gold"
+    }
+};
+// Keep a copy of the collection for tests
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+// Only change code below this line
+
+function updateRecords(id, prop, value) {
+  if (prop === "tracks" && value !== "") {
+    if (collection[id][prop]) {
+      collection[id][prop].push(value);
+    }
+    else {
+      collection[id][prop] = [value];
+    } 
+  }
+  else if (value !== "") {
+      collection[id][prop] = value;
+    }
+    else {
+      delete collection[id][prop];
+    }
+  
+  return collection;
+}
+
+// Alter values below to test your code
+updateRecords(5439, "artist", "ABBA");
+```
+
+## 21. Iterate with JavaScript While Loops
+
+```js
+var myArray = [];
+var i = 0; 
+while (i <= 4) {
+    myArray.push(i);
+    i++;
+}
+
+```
+
+## 22. Iterate with JavaScript For Loops
+```js
+
+var myArray = [];
+for (var i= 1; i <= 5; i++) {
+    myArray.push(i)
+}
+```
+## 23. Iterate Odd Numbers With a For Loop
+```js
+var myArray = [];
+
+for (var i= 1; i <= 9; i += 2 )
+{
+  myArray.push(i);
+}
+
+```
+
+## 24. Count Backwards With a For Loop
+
+```js
+var myArray = [];
+
+for (var i = 9; i > 0; i -= 2) {
+  myArray.push(i)
+}
+
+```
+
+## 25. Iterate Through an Array with a For Loop
 ```js
 
 ```
-## 19. Compound Assignment With Augmented Multiplication
+## 26. 
 ```js
-var a = 5;
-var b = 12;
-var c = 4.6;
 
-a *= 5; (a = a * 5;)
-b *= 3;
-c *= 10;
-```
-## 20. Compound Assignment With Augmented Division
-```js
-var a = 48;
-var b = 108;
-var c = 33;
-
-a /= 12; (a = a /12;)
-b /= 4;
-c /=11;
-```
-
-## 21. Declare String Variables
-with  ``` " "  ```
-```js
-var myFirstName = "Fatma";
-var myLastName = "Sumer"
-```
-
-## 22. Escaping Literal Quotes in Strings
-
-```js
-var myStr = "I am a \"double quoted\" string inside \"double quotes\"."; // Change this line
-```
-## 23. Quoting Strings with Single Quotes
-```js
-var myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
-```
-
-## 24. Escape Sequences in Strings
-
-There are a few more escaping characters!
-```js
-var myStr ="FirstLine\n\t\\SecondLine\nThirdLine";
-
-```
-
-## 25. Concatenating Strings with Plus Operator
-```js
-var myStr = "This is the start. " +  "This is the end.";
-```
-## 26. Concatenating Strings with the Plus Equals Operator
-```js
-var myStr = "This is the first sentence. ";
-myStr += "This is the second sentence.";
 ```
 ## 27. Constructing Strings with Variables
 ```js
