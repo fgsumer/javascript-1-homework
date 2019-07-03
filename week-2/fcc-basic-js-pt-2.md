@@ -548,32 +548,59 @@ multiplyAll([[1,2],[3,4],[5,6,7]]);
 
 ```
 ## 27. Iterate with JavaScript Do...While Loops
+do...while loop behaves just as you would expect with any other type of loops, but essentially, a **do...while loop** ensures that the code inside the loop will run at least once. 
 ```js
+var myArray = [];
+var i = 10;
+
+do {
+  myArray.push(i);
+  i++;
+} while (i < 5);
+
 
 ```
-## 28. 
+## 28. Profile Lookup
 ```js
+function lookUpProfile(name, prop){
+// Only change code below this line
 
+for (var x = 0; x < contacts.length; x++){
+    if (contacts[x].firstName === name) {
+        if (contacts[x].hasOwnProperty(prop)) {
+            return contacts[x][prop];
+        } else {
+            return "No such property";
+        }
+    }
+}
+return "No such contact";
+}
 ```
-## 29.
+## 29. Generate Random Fractions with JavaScript
 ```js
+function randomFraction() {
 
+ var result = 0;  // Math.random() can generate 0. We don't want to     return a 0,
+  while (result === 0) {  // so keep generating random numbers until we get one     that isn't 0
+    result = Math.random();
+  }
+
+  return result;  
+
+  // Only change code above this line.
+}
 ```
-## 30. Use Bracket Notation to Find the First Character in a String
+## 30. 
 ```js
-firstLetterOfLastName = lastName[0];
 ```
-## 31. Understand String Immutability
-String values are *immutable*, means that they cannot be altered once created.
+## 31. 
 ```js
-myStr = "Hello World";
 ```
-## 32. Use Bracket Notation to Find the Nth Character in a String
+## 32. 
 ```js
-var thirdLetterOfLastName = lastName[2];
 ```
-## 33. Use Bracket Notation to Find the Last Character in a String
-Use  ```.length-1```
+## 33.  
 ```js
 var lastLetterOfLastName = lastName[lastName.length-1];
 ```
