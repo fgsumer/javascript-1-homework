@@ -14,9 +14,19 @@ myArray[1] = "kitten";
 ### Add Items to an Array with push() and unshift()
 the push() method adds elements to the end of an array, and unshift() adds elements to the beginning. 
 ```js
+function mixedNumbers(arr) {
+ 
+arr.unshift('I', 2, 'three');
+arr.push(7, 'VIII', 9);
+
+  return arr;
+}
+
+// do not change code below this line
+console.log(mixedNumbers(['IV', 5, 'six']));
 
 ```
-### Last loop value
+### Remove Items from an Array with pop() and shift()
 ```js
 
 ```
