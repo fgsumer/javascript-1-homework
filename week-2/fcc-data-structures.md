@@ -85,9 +85,83 @@ console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']
 ```
 ### Copy an Array with the Spread Operator 
 ```js
+function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+   
+  newArr.push([...arr]); // we need to make it two times.
+   
+    num--;
+  }
+  return newArr;
+}
 
+// change code here to test different cases:
+console.log(copyMachine([true, false, true], 2));
 ```
-### 
+### Combine Arrays with the Spread Operator
+```js
+function spreadOut() {
+  let fragment = ['to', 'code'];
+  let sentence = ['learning', ...fragment,'is', 'fun']; 
+  return sentence; // returns['learning', 'to', 'code', 'is', 'fun'].
+}
+
+// do not change code below this line
+console.log(spreadOut());
+```
+### Check For The Presence of an Element With indexOf()
+indexOf(), that allows us to quickly and easily check for the presence of an element on an array. indexOf() takes an element as a parameter, and when called, it returns the position, or index, of that element, or -1 if the element does not exist on the array.
+```js
+function quickCheck(arr, elem) {
+  // change code below this line
+  if (arr.indexOf(elem) === -1) {
+    return false; 
+  } else {
+    return true;
+  }
+  // change code above this line
+}
+
+// change code here to test different cases:
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+```
+### Iterate Through All an Array's Items Using For Loops
+```js
+function filteredArray(arr, elem) {
+  let newArr = [];
+  // change code below this line
+for (let i = 0; i < arr.length; i++) {
+   if (arr[i].indexOf(elem)===-1){
+     newArr.push(arr[i]);
+}
+}
+  // change code above this line
+  return newArr;
+}
+
+// change code here to test different cases:
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+```
+### Create complex multi-dimensional arrays
+```js
+let myNestedArray = [
+  // change code below this line
+  ['unshift', false, 1],           //level 2
+  [3, 'complex', 'nested', false], //level 2
+  [
+    ['mutate', 98, true, 'deep'], //level 3
+    [
+      ['splice', 7, false, 'deeper'], //level 4
+      [
+        ['iterate', 3849, 7, 'deepest'], //level 5
+      ],
+    ],
+  ],
+ ];
+ 
+```
+### Add Key-Value Pairs to JavaScript Objects
 ```js
 
 ```
@@ -111,27 +185,11 @@ console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']
 ```js
 
 ```
-### Last loop value
+### 
 ```js
 
 ```
-### Last loop value
-```js
-
-```
-### Last loop value
-```js
-
-```
-### Last loop value
-```js
-
-```
-### Last loop value
-```js
-
-```
-### Last loop value
+### 
 ```js
 
 ```
