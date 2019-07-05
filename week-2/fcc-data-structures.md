@@ -163,33 +163,191 @@ let myNestedArray = [
 ```
 ### Add Key-Value Pairs to JavaScript Objects
 ```js
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28
+};
 
+// change code below this line
+foods.bananas = 13;
+foods.grapes = 35;
+foods.strawberries= 27;
+// change code above this line
+
+console.log(foods);
 ```
-### 
+### Modify an Object Nested Within an Object
 ```js
+let userActivity = {
+  id: 23894201352,
+  date: 'January 1, 2017',
+  data: {
+    totalUsers: 51,
+    online: 42
+  }
+};
 
+// change code below this line
+userActivity.data.online = 45;
+// change code above this line
+
+console.log(userActivity);
 ```
-### 
+### Access Property Names with Bracket Notation
 ```js
-
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+function checkInventory(scannedItem) {
+  return foods[scannedItem];
+}
+console.log(checkInventory("apples"));
 ```
-### 
+### Use the delete Keyword to Remove Object Properties
 ```js
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
 
+delete foods.oranges;
+delete foods.plums;
+delete foods.strawberries;
+
+
+console.log(foods);
 ```
-### 
+### Check if an Object has a Property
+if we want to know if an object has a specific property, we can do it in two different ways : "hasOwnProperty()" method or "in" keyword.
 ```js
+let users = {
+   Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
 
+function isEveryoneHere(obj) {
+  // change code below this line
+if (obj.hasOwnProperty("Alan", "Jeff", "Sarah", "Ryan")){
+  return true;
+} else {
+  return false;
+}
+  // change code above this line
+}
+
+console.log(isEveryoneHere(users));
 ```
-### 
+### Iterate Through the Keys of an Object with a for...in Statement
 ```js
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
 
+function countOnline(obj) {
+  
+  let userNumber = 0;
+	for (let user in obj) if (obj[user].online) userNumber++;
+	return userNumber;
+};
+
+console.log(countOnline(users));
 ```
-### 
+### Generate an Array of All Object Keys with Object.keys()
+We can  generate an array which contains all the keys stored in an object using the Object.keys() method and passing in an object as the argument. This will return an array with strings representing each property in the object. 
 ```js
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
 
+function getArrayOfUsers(obj) {
+return Object.keys(obj);
+}
+
+console.log(getArrayOfUsers(users));
 ```
-### 
+### Modify an Array Stored in an Object
 ```js
+let user = {
+  name: 'Kenneth',
+  age: 28,
+  data: {
+    username: 'kennethCodesAllDay',
+    joinDate: 'March 26, 2016',
+    organization: 'freeCodeCamp',
+    friends: [
+      'Sam',
+      'Kira',
+      'Tomo'
+    ],
+    location: {
+      city: 'San Francisco',
+      state: 'CA',
+      country: 'USA'
+    }
+  }
+};
 
+function addFriend(userObj, friend) {
+ 
+  userObj.data.friends.push(friend);
+  return userObj.data.friends;
+
+}
+console.log(addFriend(user, 'Pete'));
 ```
+
+
