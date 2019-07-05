@@ -6,7 +6,7 @@
 | :dash: __[janke: tracing conditionals](./jl-tracing-conditionals.md) | :wavy_dash:| link is not working!| | |
 | :seedling: __[javascript.info: loops](./jsinfo-loops.md) |:white_check_mark: |Study more on break and continue.  | | |
 | :dash: __[janke: loop refactors](./jl-loop-refactors.md) |:wavy_dash: | | | |
-| :seedling: __[fcc: data structures](./fcc-data-structures.md) | |it can take time | | |
+| :seedling: __[fcc: data structures](./fcc-data-structures.md) |:white_check_mark: | | | |
 | :seedling: __[janke: errors const](./jl-errors-const.md) |:white_check_mark: | | | |
 | :seedling: __[janke: errors arrays](./jl-errors-arrays.md) |:white_check_mark:  | | | |
 | :seedling: __[janke: errors objects](./jl-errors-objects.md) |:white_check_mark: | | | |
