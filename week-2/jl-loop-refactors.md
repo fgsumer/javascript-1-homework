@@ -247,11 +247,14 @@ _original for loop_
 
 _refactor to while_
 ```js
-{
-  while () {
-
-  }
+{ let result = 0;
+  let i = 1;
+  while (i < 10) {
+    result += i;
+    console.log(i);
+    i += result }
 }
+
 ```
 
 [parsonized solution](https://janke-learning.github.io/parsonizer/?snippet=let%20result%20%3D%200%3B%0Alet%20i%20%3D%201%3B%0Awhile%20%28%20i%20%3C%2010%20%29%20%7B%0A%20%20result%20%2B%3D%20i%3B%0A%20%20console.log%28i%29%3B%0A%20%20i%20%2B%3D%20result%3B%0A%7D)
