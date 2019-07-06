@@ -276,11 +276,10 @@ _original for loop_
 
 _refactor to while_
 ```js
-{
-  while () {
-
-  }
-}
+let i = -3; 
+while (i === 10 || i < 20) {
+  console.log(i);
+  i *= -1.5 }
 ```
 
 [parsonized solution](https://janke-learning.github.io/parsonizer/?snippet=let%20i%20%3D%20-3%3B%0Awhile%20%28i%20%3D%3D%3D%2010%20%7C%7C%20i%20%3C%2020%29%20%7B%0A%20%20console.log%28i%29%3B%0A%20%20i%20*%3D%20-1.5%3B%0A%7D)
