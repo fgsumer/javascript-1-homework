@@ -137,7 +137,9 @@ __Swap the Object & the Array__
   let _ = null;
 
   // --- swap below here ---
-
+_ = arr;
+arr = obj;
+obj = _;
 }
 ```
 
