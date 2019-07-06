@@ -336,10 +336,15 @@ _original for loop_
 
 _refactor to while_
 ```js
-{
-  while () {
-
-  }
+{const mixitup = false;
+  let val;
+  let i = '';
+  
+  while (!!i !== true ) {
+    val = !i || mixitup * i;
+    console.log(!!val);
+    i = +val;
+    }
 }
 ```
 
