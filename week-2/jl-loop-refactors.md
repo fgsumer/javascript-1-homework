@@ -376,10 +376,8 @@ _original while loop_
 
 _refactor to for_
 ```js
-{
-  for ( ; ; ) {
-
-  }
+for (let x = 9; x > 2; x--) {
+  console.log(x * 3);
 }
 ```
 
@@ -404,10 +402,8 @@ _original while loop_
 
 _refactor to for_
 ```js
-{
-  for ( ; ; /* nothing goes here */ ) {
-
-  }
+for ( let x = 9; x++ < 20; ) {
+ console.log(x); 
 }
 ```
 
@@ -433,10 +429,8 @@ _original while loop_
 
 _refactor to for_
 ```js
-{
-  for ( ; x <  ; x += 1 ) {
-
-  }
+for (let x = 10 ; x <= 20; x += 1 ) {
+  console.log(x);
 }
 ```
 
@@ -461,10 +455,8 @@ _original while loop_
 
 _refactor to for_
 ```js
-{
-  for ( ;  ;  ) {
-
-  }
+for (let x = 10; x < 20; x++) {
+  console.log(x);
 }
 ```
 
